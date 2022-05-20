@@ -1,0 +1,17 @@
+<mat-toolbar style="align-items: center">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>NGX-MAPBOX-GL</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="primary" (click)="addIconAtCenter()" style="margin-right: 20px">Add Icon</button>
+    <mat-form-field class="font-size">
+        <mat-label>Select an option</mat-label>
+        <mat-select [(ngModel)]="SelectedMap" (selectionChange)="onChange($event.value)">
+          <mat-option value="map">Map</mat-option>
+          <mat-option value="satellite">Satellite</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </mat-toolbar>
+
+<div class="map" id="map" class="match-parent"></div>
