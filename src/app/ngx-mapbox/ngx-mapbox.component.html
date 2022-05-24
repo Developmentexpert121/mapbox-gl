@@ -5,6 +5,14 @@
     <span>NGX-MAPBOX-GL</span>
     <span class="example-spacer"></span>
     <button mat-raised-button color="primary" (click)="addIconAtCenter()" style="margin-right: 20px">Add Icon</button>
+    <!-- <mat-form-field class="font-size" style="margin-right: 20px">
+      <mat-label>Change Language</mat-label>
+      <mat-select [(ngModel)]="selectedLanguage" (selectionChange)="onLanguageChange($event.value)">
+        <mat-option value="en">English</mat-option>
+        <mat-option value="de">German</mat-option>
+        <mat-option value="es">spanish</mat-option>
+      </mat-select>
+    </mat-form-field> -->
     <mat-form-field class="font-size">
         <mat-label>Select an option</mat-label>
         <mat-select [(ngModel)]="SelectedMap" (selectionChange)="onChange($event.value)">

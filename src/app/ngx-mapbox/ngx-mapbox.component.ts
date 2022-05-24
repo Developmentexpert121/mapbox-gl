@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MapboxService } from './service/mapbox.service';
 import * as mapboxgl from 'mapbox-gl';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-ngx-mapbox',
@@ -27,6 +26,7 @@ export class NgxMapboxComponent implements OnInit {
         zoom: 9,
         center: [this.lng, this.lat],
     });
+    mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.2.3/mapbox-gl-rtl-text.js', (): void => {} ,true);
     const popup = new mapboxgl.Popup({ closeButton: true,closeOnClick: true });
     let marker = new mapboxgl.Marker({
     color: 'red',
